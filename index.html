@@ -1,35 +1,73 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Security Awareness Training</title>
+    <title>Security Awareness Training Portal</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Security Awareness Training Module</h1>
-    </header>
-    <main>
-        <section id="content">
-            <h2>Common Cybersecurity Threats</h2>
-            <p>Learn about common threats like phishing, malware, and social engineering.</p>
-            <button id="startQuiz">Start Quiz</button>
-        </section>
-        <section id="quiz" style="display: none;">
-            <h2>Quiz</h2>
-            <div id="quizContent"></div>
-            <button id="submitAnswers">Submit Answers</button>
-        </section>
-        <section id="results" style="display: none;">
-            <h2>Results</h2>
-            <div id="resultContent"></div>
-            <button id="restart">Restart Training</button>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Security Awareness Training</p>
-    </footer>
+    <div class="page-shell">
+        <header class="hero">
+            <div class="hero-copy">
+                <p class="eyebrow">Employee Security Education</p>
+                <h1>Security Awareness Training Portal</h1>
+                <p class="hero-text">
+                    Build stronger everyday security habits with a short training module covering phishing, passwords,
+                    safe browsing, and social engineering awareness.
+                </p>
+                <button id="startQuiz" class="primary-btn">Start Training Quiz</button>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section id="overview" class="panel">
+                <h2>Training Topics</h2>
+                <div class="topic-grid">
+                    <article class="topic-card">
+                        <h3>Phishing Awareness</h3>
+                        <p>Learn how to spot suspicious messages, fake login prompts, and pressure tactics.</p>
+                    </article>
+                    <article class="topic-card">
+                        <h3>Password Hygiene</h3>
+                        <p>Understand why strong, unique passwords and multi-factor authentication matter.</p>
+                    </article>
+                    <article class="topic-card">
+                        <h3>Safe Browsing</h3>
+                        <p>Recognize risky downloads, untrusted links, and common web-based attack patterns.</p>
+                    </article>
+                    <article class="topic-card">
+                        <h3>Social Engineering</h3>
+                        <p>Practice identifying manipulation attempts designed to extract access or information.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="quiz" class="panel hidden">
+                <div class="section-header">
+                    <h2>Knowledge Check</h2>
+                    <p id="quizMeta">5 Questions</p>
+                </div>
+                <div id="quizContent"></div>
+                <button id="submitAnswers" class="primary-btn">Submit Answers</button>
+            </section>
+
+            <section id="results" class="panel hidden">
+                <h2>Training Results</h2>
+                <div id="resultSummary"></div>
+                <div id="resultDetails"></div>
+                <div class="result-actions">
+                    <button id="retakeQuiz" class="primary-btn">Retake Quiz</button>
+                    <button id="backToOverview" class="secondary-btn">Back To Overview</button>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 Security Awareness Training Portal</p>
+        </footer>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
